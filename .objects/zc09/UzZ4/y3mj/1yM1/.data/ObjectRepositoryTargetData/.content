@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="jgaP-m6NCEm52aXnCjyy8w" Reference="CcmIsI-4GUCBFFJdsVuOPQ/1yM1jrCj_UCdJIicQYFdPw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="emag.ro/history/shoppingdetails/431229116" CVScreenId="05278dcc-8fc7-4262-af16-a08bce7079bc" DesignTimeRectangle="745, 305, 610, 38" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='product-description' idx='{0}' tag='P' /&gt;&quot;, ProductIndex)]" Guid="db15de50-f512-4595-89d3-58311ec155ce" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="af17538a025f8834a4010d17e1a50989.png" xmlns="">02QZ1l-E33kONqfeRUPMyzg</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsString="False" Name="productIndex">
+        <ObjectRepositoryVariableData.DefaultValue>
+          <x:Int32>1</x:Int32>
+        </ObjectRepositoryVariableData.DefaultValue>
+      </ObjectRepositoryVariableData>
+    </scg:List>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

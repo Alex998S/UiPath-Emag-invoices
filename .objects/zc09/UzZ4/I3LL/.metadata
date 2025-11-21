@@ -1,0 +1,16 @@
+﻿{
+  "Name": "eMag - Orders page",
+  "Type": "Screen",
+  "Id": "I3LL7z8RL0WCF5rhWBg_fw",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/UzZ4fFL_WUupiWy-cD67jw",
+  "Created": "2025-08-04T13:25:59.3944028Z",
+  "Updated": "2025-11-13T15:24:49.0877158Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

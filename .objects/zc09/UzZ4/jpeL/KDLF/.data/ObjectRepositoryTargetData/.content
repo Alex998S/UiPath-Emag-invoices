@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MifbO1AGPUy09xINAadv6g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="auth.emag.ro/user/login" CVScreenId="43878ccc-4659-4b17-9609-a83429489b58" CvElementArea="793, 584, 349, 42" CvType="InputBox" DesignTimeRectangle="795, 586, 346, 40" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='user_login_email' tag='INPUT' /&gt;" Guid="d21beb4d-345f-4689-b01d-773ea76919e4" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Libertate în fiecare zi' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="770d62d07db6296f9514d73fdeaf4325.png" xmlns="">0umeIcDAB4kWl4QrT-JYeqQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

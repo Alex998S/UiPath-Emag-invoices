@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MVj593pPCE6Lg_hnd_riOQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="auth.emag.ro/user/login" CVScreenId="819d2bf5-8a84-4617-8d34-ce77d70cf9cf" DesignTimeRectangle="795, 555, 346, 40" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='user_login_password' tag='INPUT' /&gt;" Guid="c23e19f5-0431-437d-942b-2f06b1f60eca" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Libertate în fiecare zi' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b59a29773962e5e4e9ff840c974dd7d6.png" xmlns="">0Xi9G8wZx-k63R515DYeIeA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

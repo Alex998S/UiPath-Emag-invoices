@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8JwyV8aZHE6LBnN2umDyHQ" Reference="CcmIsI-4GUCBFFJdsVuOPQ/560mpunRsEeH8e8ok4b93A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.emag.ro/history/shopping?status=all&amp;time=older" ContentHash="VBw5x4PTpkO813Nh0Rj0Ww" DesignTimeRectangle="501, 287, 1210, 3857" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='history-shopping' parentid='main-container' tag='DIV' /&gt;" Guid="2e116810-1857-4a74-8d8b-cbd0b44a17c0" Reference="CcmIsI-4GUCBFFJdsVuOPQ/560mpunRsEeH8e8ok4b93A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="409f56b54d44f737671bd6d903861169.png" xmlns="">0QLF-dK5Tk06S5r5L6lJmkQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">ForEachUiElement</x:String>
+    <p:InArgument x:TypeArguments="x:String" x:Key="ExtractDataSettings" xml:space="preserve">&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='false' IsScrollEnabled='false'&gt;
+	&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentOrder'&gt;
+		&lt;IsValidName&gt;true&lt;/IsValidName&gt;
+		&lt;ValidationErrorMessage /&gt;
+		&lt;IsExtra&gt;false&lt;/IsExtra&gt;
+		&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;
+		&lt;Format xsi:type='TextColumnFormat' /&gt;
+	&lt;/Column&gt;
+	&lt;Column xsi:type='DataNextLink' /&gt;
+&lt;/Table&gt;</p:InArgument>
+    <TargetAnchorable x:Key="NextLinkTarget" BrowserURL="emag.ro/history/shopping" CVScreenId="b1d0acf5-13ca-4e8c-89c5-b0659aaf2e38" CvElementArea="1190, 596, 140, 32" CvTextArea="1202, 605, 113, 15" CvTextArgument="Pagina urmatoare&gt;" CvType="Button" DesignTimeRectangle="1191, 597, 137, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Pagina urmatoare' parentid='main-container' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Pagina urmatoare' parentid='main-container' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Pagina urmatoare' /&gt;" Guid="f323f825-3582-4ac4-928e-0405c941ed0e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.PointOffset>
+        <PointOffset X="0" Y="0" />
+      </TargetAnchorable.PointOffset>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Set the download location",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "cgBrENzJyUaGUjTLG8pIdA",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/cgBrENzJyUaGUjTLG8pIdA",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/y3mjs8sRm0yIcIvHlxr8qQ",
+  "Created": "2025-10-28T05:29:22.4145784Z",
+  "Updated": "2025-10-28T05:59:58.0544421Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

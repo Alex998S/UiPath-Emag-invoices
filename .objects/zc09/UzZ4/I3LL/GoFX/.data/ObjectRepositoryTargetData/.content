@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="jK3PwX_kmkWgsxGNY7GltQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="auth.emag.ro/user/login" DesignTimeRectangle="775, 418, 386, 447" FullSelectorArgument="&lt;webctrl class='auth-panel' tag='DIV' /&gt;" Guid="586f3de4-a3a3-405f-b294-9bd66560fe52" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Libertate în fiecare zi' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="29333edd2e58f0607ca6fa55b2fa4333.png" xmlns="">0B0kTA3kCq0iqULqmyk4F_g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

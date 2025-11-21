@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Plăți sigure și rapide …",
+  "Type": "Element",
+  "Id": "GoFXcAjUnEWdrGH3nxQ90Q",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/GoFXcAjUnEWdrGH3nxQ90Q",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-10-27T05:28:22.3527094Z",
+  "Updated": "2025-10-27T05:28:22.3527094Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

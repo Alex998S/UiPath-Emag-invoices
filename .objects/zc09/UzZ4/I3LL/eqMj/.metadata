@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Order details",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "eqMj01GIeEynkFMybH16tw",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/eqMj01GIeEynkFMybH16tw",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-08-06T04:42:15.3340092Z",
+  "Updated": "2025-08-06T04:42:15.3340092Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

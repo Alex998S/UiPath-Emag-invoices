@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Product",
+  "Type": "Element",
+  "Id": "AhVvdwZZlU6R7NRqImBIQQ",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/AhVvdwZZlU6R7NRqImBIQQ",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/y3mjs8sRm0yIcIvHlxr8qQ",
+  "Created": "2025-08-06T04:44:54.0313507Z",
+  "Updated": "2025-08-06T04:44:54.0313507Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

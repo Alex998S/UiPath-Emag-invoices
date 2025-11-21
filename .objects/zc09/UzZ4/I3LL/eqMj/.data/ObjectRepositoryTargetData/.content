@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YszhaliRUk2qgKi81AMw-A" Reference="CcmIsI-4GUCBFFJdsVuOPQ/eqMj01GIeEynkFMybH16tw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="emag.ro/history/shopping" CVScreenId="b22c7458-a198-41ef-8e10-87a12cf6d66f" DesignTimeRectangle="513, -110, 1186, 37" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='main-container' tag='DIV' class='order-list*' /&gt;&lt;webctrl parentid='main-container' tag='A' class='btn btn-link*' visibleinnertext='Vezi detalii comanda' idx='{0}' /&gt;&quot;, OrderIndex)]" Guid="5a474d90-1f6c-405f-853c-9b16635ef748" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="15fb0c7c207197a6f12eb95a20195271.png" xmlns="">0EwdcIbFiEEWX92icd6I_YA</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsString="False" Name="OrderIndex">
+        <ObjectRepositoryVariableData.DefaultValue>
+          <x:Int32>1</x:Int32>
+        </ObjectRepositoryVariableData.DefaultValue>
+      </ObjectRepositoryVariableData>
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Orders status",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "4BIpOnShLEyjgEcKL_HqvA",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/4BIpOnShLEyjgEcKL_HqvA",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-08-04T13:25:59.444778Z",
+  "Updated": "2025-08-04T13:25:59.444778Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="jiHKsUKKzEOjrAVrzo35hw" Reference="CcmIsI-4GUCBFFJdsVuOPQ/AAu_-AwtBkWaPrsxRNGkJQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="emag.ro/history/shopping" CVScreenId="86e79bee-af80-4194-9502-d16b577c7c0b" DesignTimeRectangle="680, 716, 191, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Toate' class='ph-option' tag='A' /&gt;" Guid="e64fb6db-d614-42c8-84cd-46b1dee8fad3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b595cd880b4912da074cd40109e7288f.png" xmlns="">07kPxOcOOlUig1DGypVfAmw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OoiaEer_wkajFA6yP888HA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="emag.ro/history/shopping" CVScreenId="fe782f4a-39fa-4509-8a4e-85edd9ab2157" DesignTimeRectangle="1350, 215, 221, 20" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='order-date' parentid='main-container' tag='DIV' idx='{0}' /&gt;&quot;, OrderIndex)]" Guid="bed6f42c-6aa4-4133-80f3-81965665dee8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro*' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3387cea4f51d67fc97dd7701c08dabb1.png" xmlns="">0o19OkzAdakKBoxlA9YnfkQ</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsString="False" Name="OrderIndex">
+        <ObjectRepositoryVariableData.DefaultValue>
+          <x:Int32>1</x:Int32>
+        </ObjectRepositoryVariableData.DefaultValue>
+      </ObjectRepositoryVariableData>
+    </scg:List>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

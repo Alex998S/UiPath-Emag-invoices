@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="UHF4f6d6EkqDUxIS_Cc9GA" Reference="CcmIsI-4GUCBFFJdsVuOPQ/Kg2aje_s2ESp60P_RhsznA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="emag.ro/history/shopping/2" CVScreenId="917bf74a-f24d-4b30-9aeb-ab498a0f1be8" CvElementArea="1044, 390, 34, 34" CvType="Button" DesignTimeRectangle="1048, 392, 28, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DIV' class='placeholder pagination-container' /&gt;&lt;webctrl tag='LI' class='active' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='placeholder pagination-container' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl tag='LI' class='active' type='' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5dda1522-2862-4e90-86ef-4a80511b9d1c" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.emag.ro/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8b05e1c82de6644181f50df1bacf6d5a.png" xmlns="">03yE4SK4h906uVP8Dx0oBTg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

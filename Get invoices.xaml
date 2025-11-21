@@ -1,0 +1,1181 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_invoices" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Get_invoices_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Platform</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Get_invoices" sap:VirtualizedContainerService.HintSize="1281,4521" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="1" Name="PreviousPage" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="ProductIndex" />
+      <Variable x:TypeArguments="x:String" Name="OrderID" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="OrderIndex" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="InvoiceIndex" />
+      <Variable x:TypeArguments="x:Boolean" Name="OrderExcelExists" />
+      <Variable x:TypeArguments="x:Double" Name="LastSavedOrder" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Orders" />
+      <Variable x:TypeArguments="x:String" Name="CurrentPage" />
+      <Variable x:TypeArguments="upr:ILocalResource" Name="OrdersFile" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ucas:DownloadStorageFile Destination="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Download Storage File &quot;Orders&quot;" sap:VirtualizedContainerService.HintSize="680,167" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="Orders.xlsx" Result="[OrdersFile]" StorageBucketName="OrdersSheet">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ucas:DownloadStorageFile>
+    <ui:FileExistsX DisplayName="File Exists &quot;Check if orders file exists&quot;" Exists="[OrderExcelExists]" sap:VirtualizedContainerService.HintSize="680,167" sap2010:WorkflowViewState.IdRef="FileExistsX_2" Path="Orders.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:FileExistsX>
+    <If Condition="[OrderExcelExists]" DisplayName="If &quot;A file with the orders already exists&quot;" sap:VirtualizedContainerService.HintSize="680,995" sap2010:WorkflowViewState.IdRef="If_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="586,691" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope &quot;Orders&quot;" sap:VirtualizedContainerService.HintSize="552,631" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+            <ueab:ExcelProcessScopeX.Body>
+              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,521" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File &quot;Orders&quot;" sap:VirtualizedContainerService.HintSize="484,461" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="Orders.xlsx">
+                    <ueab:ExcelApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,165" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A2&quot;)]" DisplayName="Read Cell Value &quot;Get the last saved OrderID&quot;" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                            <ueab:ReadCellValueX.SaveTo>
+                              <OutArgument x:TypeArguments="x:Double">[LastSavedOrder]</OutArgument>
+                            </ueab:ReadCellValueX.SaveTo>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ueab:ReadCellValueX>
+                          <ueab:ReadRangeX DisplayName="Read Range &quot;Save all the orders in a data table&quot;" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveTo="[dt_Orders]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ueab:ReadRangeX>
+                        </Sequence>
+                      </ActivityAction>
+                    </ueab:ExcelApplicationCard.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ueab:ExcelApplicationCard>
+                </Sequence>
+              </ActivityAction>
+            </ueab:ExcelProcessScopeX.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ueab:ExcelProcessScopeX>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="586,165" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:BuildDataTable DataTable="[dt_Orders]" DisplayName="Build Data Table 'Orders'" sap:VirtualizedContainerService.HintSize="552,57" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;OrderID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Product&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Quantity&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:BuildDataTable>
+          <Assign DisplayName="Assign &quot;LastSavedOrder is empty&quot;" sap:VirtualizedContainerService.HintSize="552,48" sap2010:WorkflowViewState.IdRef="Assign_11">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Double">[LastSavedOrder]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+            </Assign.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Assign>
+        </Sequence>
+      </If.Else>
+    </If>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="eMag - order first page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="680,3169" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646,2928" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Assign 'OrderIndex'" sap:VirtualizedContainerService.HintSize="612,57" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[OrderIndex]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Orders status'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="612,57" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping" CVScreenId="d7cb28ae-b7fb-4337-b927-8709f78a9e01" ContentHash="z_bh3ttXn0qotSV4Udil1A" CvElementArea="442, 464, 197, 44" CvType="InputBox" DesignTimeRectangle="446, 467, 192, 40" DesignTimeScaleFactor="1.25" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='form-filters' tabindex='0' tag='DIV' /&gt;" Guid="cd8daf20-4dc9-470b-b44b-e0fb7a9fa71b" ImageBase64="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" InformativeScreenshot="eaa6cfd4e984926e6013d0adcc0b6bda.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/4BIpOnShLEyjgEcKL_HqvA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d7cb28ae-b7fb-4337-b927-8709f78a9e01" CvTextArea="407, 479, 32, 16" CvTextArgument="vezi" CvType="Text" DesignTimeRectangle="409, 475, 32, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='control-label fw-normal m-0' aaname='vezi' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='vezi' /&gt;" Guid="dc609401-cb30-4d0c-9860-e5a82742b6c6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAdCAYAAADCdc79AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAISSURBVFhH7ZUhi+NAFID3tzyoCJwYWBE4U05cOREXt4UTVRsXqNkVJVVrjrpjxS5nSk3NQUUhopBVXVGoOLriqDlqCnEVC4WK70jStEmbkqxqRT4YkfdmMh/zXiZXXBhXh4FzUwrlUQrlUQrtWPZpfK7hvKxT4bMK1Ssajd9+Knw+oRNcsNCrg5IqnT+pfMQkyCmc1ziwYtqzMa81RATRFGbLxd/EeQ87iGeNphdN+feMIYI9itdE7IU2YxwlqPY0NSFg2laIcogya7x7HdFMHoYzFr7P/KVDQxfkpk/UEWtWvo+fHKM7dNGxR6vopblCRxtv2YpWf8yi57cOVdFxJslJ8Qmr43jAZoqjC3rTY6tTTCjaLFmaRCnfosfFk4F8usM9PIFlH0sE49cisThi2tYR3cbb2RQVYkbni6Ba411k3FKI8Uy8jdfM6IvEMJ4OhCZOulQxxYTA75lIxcYLGnTjYVcEs7e/K0Khbz+Zp1adIKtUMUWFWHYx44kjGxGT7nKfnj/WELEYvCcXZZNZqpjCQvj0b4LP08UNTuN2QOpyD/tMMB5zzuhUqWKKC8F6aCGqSlUJ1jD9rwk/+5aOiEat1WX8N2jqOeNhl4fvHcLu25ZKu+2H10Kq+Vfb931EiHcXqyJIxcLNLM2axfCB+le1a2btukb9fhA1f1jq44b/2MV4IZRCeZRCeZRCeVyc0H80hCvrr2b4NAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'All orders'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="612,57" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping" CVScreenId="515b598d-5fcf-435d-8314-c90105857c04" ContentHash="aOPmp7jVIk-6hAFqqcNUpw" DesignTimeRectangle="447, 546, 190, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='toate comenzile' class='ph-option*' /&gt;" Guid="7d3cad01-3650-42e7-8951-4b744d79c36e" InformativeScreenshot="8b04e6d3c51d8c2df988355e923af2ae.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/ntREuI1MHUWgZWA4SeBzXw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Order period'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="612,57" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping" CVScreenId="d7cb28ae-b7fb-4337-b927-8709f78a9e01" ContentHash="b7jUNAvgc0O2HQqyb9nQdg" CvElementArea="676, 464, 198, 44" CvType="InputBox" DesignTimeRectangle="679, 467, 193, 40" DesignTimeScaleFactor="1.25" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' parentid='form-filters' tabindex='0' tag='DIV' /&gt;" Guid="f0e756cf-9cd8-4e88-b957-f2c931592cfc" ImageBase64="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" InformativeScreenshot="f468257ad3655cbb25f815d800c3cd2c.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/Qo3N1tJNv0KvbyWgZPHlpA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d7cb28ae-b7fb-4337-b927-8709f78a9e01" CvTextArea="646, 477, 27, 17" CvTextArgument="din" CvType="Text" DesignTimeRectangle="648, 475, 26, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='din' tag='LABEL' type='' class='control-label fw-normal m-0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='din' /&gt;" Guid="5912b8c2-e320-4307-b9e0-7cf287825768" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAdCAYAAAC9pNwMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFvSURBVEhL7ZSxa8JAFIf9Wx44ZLstY+mQTAcOQodmqlBoNqGLS3FzKXbskODiIsHJTikIujkUHMTNRa5D4bYMBcHhV5Jq7Z3YBlujQ74tL+/dd9z9kgKOREEvZEUuzoxcvJPBLYG4D7F6lt0KTKuOwbvWmJL9xR0HZFTQk1pjSvYW/5UTEi8lwrsymEEgIhjnDhrPEqEmFh4HURWD9dzcBycOfx5h7Lmw2ec8MRuuN0a0MSRoYongygAVbdS6UwgpMRu1UbNMcG6mEDPYlgnzuolwIiBfpwgfKjCJwFvqWanilzoYEdwnbX9vbZTj3f8qJtBFG2reFujdEKikXpMinj3ayWLh8ns1RiK4TCd2OtsxT3q1fCjinwKkv9slrvY3M2tOVzy9PwMVa5vFvljd06HEGMXhYqj2F0oZUQ9u8ZBiCPglAhllNIYzSCkhJkHyOdkWO6Q4PlWx9QNpDiOIljr8/+KMyMWZkYsz42jiD0hwl6C5fgu6AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click All'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="612,57" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping" CVScreenId="86e79bee-af80-4194-9502-d16b577c7c0b" ContentHash="jiHKsUKKzEOjrAVrzo35hw" DesignTimeRectangle="680, 716, 191, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Toate' class='ph-option' tag='A' /&gt;" Guid="e64fb6db-d614-42c8-84cd-46b1dee8fad3" InformativeScreenshot="b595cd880b4912da074cd40109e7288f.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/M_HGU-c8d0qnsAqUBbQhLw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NForEachUiElement DisplayName="For Each UI Element 'Order'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='false' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentOrder'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="612,2304" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="Rows" MaximumResults="1000" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+              <uix:NForEachUiElement.Body>
+                <ActivityAction x:TypeArguments="x:Int32">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do 'Get product detail'" sap:VirtualizedContainerService.HintSize="548,2005" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="OrderDate" />
+                      <Variable x:TypeArguments="x:String" Name="OrderURL" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NGetText DisplayName="Get Text 'Current page number'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" TextString="[CurrentPage]" Version="V5">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping/2" CVScreenId="917bf74a-f24d-4b30-9aeb-ab498a0f1be8" ContentHash="UHF4f6d6EkqDUxIS_Cc9GA" CvElementArea="1044, 390, 34, 34" CvType="Button" DesignTimeRectangle="1048, 392, 28, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DIV' class='placeholder pagination-container' /&gt;&lt;webctrl tag='LI' class='active' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='placeholder pagination-container' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl tag='LI' class='active' type='' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5dda1522-2862-4e90-86ef-4a80511b9d1c" ImageBase64="" InformativeScreenshot="8b05e1c82de6644181f50df1bacf6d5a.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/e3iArIuNDkiDVtbnVSnHJw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.emag.ro/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <If Condition="[CInt(CurrentPage) &gt; CInt(PreviousPage)]" DisplayName="If 'Changed page'" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="If_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,403" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="Assign &quot;Set the order index to 1&quot;" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_14">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[OrderIndex]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                          <ui:LogMessage DisplayName="Log Message &quot;Current page&quot;" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;On the page &quot; + CurrentPage]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <Assign DisplayName="Assign 'ProductIndex'" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[ProductIndex]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <Assign DisplayName="Assign 'InvoiceIndex'" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[InvoiceIndex]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute 'Order URL'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[OrderURL]" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                      <uix:NGetAttributeGeneric.Target>
+                        <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping" CVScreenId="f76ea345-deb8-4ca1-af24-eef2510b8476" ContentHash="cMlXoNMik06jooyKbLEF8w" DesignTimeRectangle="513, 490, 1186, 37" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='main-container' tag='DIV' class='order-hist-box*' idx='{0}' /&gt;&lt;webctrl href='/history/shoppingdetails/*' class='btn btn-link*' tag='A' /&gt;&quot;, OrderIndex)]" Guid="91296d4d-547f-4516-9a13-7bdd54b4a3c5" InformativeScreenshot="53165404af8313d6dd44190594ff1f0c.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/FMEr6_4bo0GMZ5XMqpu98g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NGetAttributeGeneric.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetAttributeGeneric>
+                    <Assign DisplayName="Assign 'Order ID'" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[OrderID]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[OrderURL.Substring(OrderURL.LastIndexOf("/")+1)]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <If Condition="[OrderID = LastSavedOrder.ToString.Substring(LastSavedOrder.ToString.LastIndexOf(&quot;.&quot;)+1)]" DisplayName="If 'The current order is already saved'" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="If_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,165" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="LogMessage_11" Message="[OrderID + &quot; = &quot; + LastSavedOrder.ToString]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                          <ui:Break DisplayName="Break &quot;The following orders are saved&quot;" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Break_3" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <uix:NGetText DisplayName="Get Text 'Order date'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" TextString="[OrderDate]" Version="V5">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping" CVScreenId="fe782f4a-39fa-4509-8a4e-85edd9ab2157" ContentHash="OoiaEer_wkajFA6yP888HA" DesignTimeRectangle="1350, 215, 221, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='order-date' parentid='main-container' tag='DIV' idx='{0}' /&gt;&quot;, OrderIndex)]" Guid="bed6f42c-6aa4-4133-80f3-81965665dee8" InformativeScreenshot="3387cea4f51d67fc97dd7701c08dabb1.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/kxiLQWugcUq22A6tFKTXbw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Order details'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping" CVScreenId="f76ea345-deb8-4ca1-af24-eef2510b8476" ContentHash="cMlXoNMik06jooyKbLEF8w" DesignTimeRectangle="513, 490, 1186, 37" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='main-container' tag='DIV' class='order-hist-box*' idx='{0}' /&gt;&lt;webctrl href='/history/shoppingdetails/*' class='btn btn-link*' tag='A' /&gt;&quot;, OrderIndex)]" Guid="91296d4d-547f-4516-9a13-7bdd54b4a3c5" InformativeScreenshot="53165404af8313d6dd44190594ff1f0c.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/FMEr6_4bo0GMZ5XMqpu98g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <uix:NCheckState DisplayName="Check App State 'Products page to load'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message &quot;Product page loaded&quot;" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Product page loaded&quot;]" />
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message &quot;Product page failed to load&quot;" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[&quot;Product page failed to load&quot;]" />
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="emag.ro/history/shoppingdetails/431229116" CVScreenId="05278dcc-8fc7-4262-af16-a08bce7079bc" ContentHash="jgaP-m6NCEm52aXnCjyy8w" DesignTimeRectangle="745, 305, 610, 38" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='product-description' idx='{0}' tag='P' /&gt;&quot;, ProductIndex)]" Guid="db15de50-f512-4595-89d3-58311ec155ce" ImageBase64="" InformativeScreenshot="af17538a025f8834a4010d17e1a50989.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/1yM1jrCj_UCdJIicQYFdPw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                    <uix:NForEachUiElement DisplayName="For Each UI Element 'Product'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='false' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' ReferenceIdx='0' Name='CurrentProduct'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="NForEachUiElement_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                      <uix:NForEachUiElement.Body>
+                        <ActivityAction x:TypeArguments="x:Int32">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,340" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="ProductName" />
+                              <Variable x:TypeArguments="x:String" Name="ProductQuantity" />
+                              <Variable x:TypeArguments="x:String" Name="ProductPrice" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGetText DisplayName="Get Text 'product name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" TextString="[ProductName]" Version="V5">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="emag.ro/history/shoppingdetails/431229116" CVScreenId="05278dcc-8fc7-4262-af16-a08bce7079bc" ContentHash="jgaP-m6NCEm52aXnCjyy8w" DesignTimeRectangle="745, 305, 610, 38" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='product-description' idx='{0}' tag='P' /&gt;&quot;, ProductIndex)]" Guid="db15de50-f512-4595-89d3-58311ec155ce" ImageBase64="" InformativeScreenshot="af17538a025f8834a4010d17e1a50989.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/1yM1jrCj_UCdJIicQYFdPw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NGetText.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NGetText>
+                            <uix:NGetText DisplayName="Get Text 'product quantity'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" TextString="[ProductQuantity]" Version="V5">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="emag.ro/history/shoppingdetails/431229116" CVScreenId="8d58561a-b6cc-46cd-8d0e-9ec58cb75c25" ContentHash="VIlspCDwE0uhoDFcNcwBIw" DesignTimeRectangle="1462, -1977, 36, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='product-quantity' parentid='emg-body-overlay' tag='SPAN' idx='{0}' /&gt;&quot;, ProductIndex)]" Guid="6edf6297-d898-46a7-8f6b-90ee7cb9d3c5" InformativeScreenshot="44a94765fdf5dfdb247523c6507d2a3e.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/t8haBnlkfkmmRlvMAoH3Jg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NGetText.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NGetText>
+                            <uix:NGetText DisplayName="Get Text 'Product price'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" TextString="[ProductPrice]" Version="V5">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="emag.ro/history/shoppingdetails/440982735" CVScreenId="d5c835cb-244c-4767-ab88-aea87da96392" ContentHash="FpWww_a4G0yn9AqaNHB55g" DesignTimeRectangle="1355, 504, 143, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='order-items-price' tag='P' idx='{0}' /&gt;&quot;, ProductIndex)]" Guid="b963b183-5b38-475f-b64c-8fa041858662" InformativeScreenshot="e651f45097485449be7fdef01169e85c.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/MuWtfUmVRUqvKwMW9KJEMQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NGetText.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NGetText>
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{OrderID, ProductName, ProductQuantity, ProductPrice, OrderDate.Substring(0, OrderDate.IndexOf(&quot;,&quot;))}]" DataTable="[dt_Orders]" DisplayName="Add Data Row 'Product to data table'" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:AddDataRow>
+                            <Assign DisplayName="Assign &quot;Increment the product index&quot;" sap:VirtualizedContainerService.HintSize="416,50" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[productIndex]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[productIndex + 1]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NForEachUiElement.Body>
+                      <uix:NForEachUiElement.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.emag.ro/history/shoppingdetails/431229116" ContentHash="q5R-VNaFFk2tH_JPAKzopw" DesignTimeRectangle="514, 136, 1195, 4624" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='account_holder' parentid='emg-body-overlay' tag='SPAN' /&gt;" Guid="a01e2bc9-5a46-4af9-9f3a-c340e5cae2fa" InformativeScreenshot="8e63b983741bd275d8ce0ad884243222.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/AhVvdwZZlU6R7NRqImBIQQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NForEachUiElement.Target>
+                      <uix:NForEachUiElement.Variables>
+                        <Variable x:TypeArguments="x:Int32" Default="0" Name="productQuantity" />
+                        <Variable x:TypeArguments="x:String" Name="productName" />
+                        <Variable x:TypeArguments="x:Int32" Default="1" Name="productIndex" />
+                        <Variable x:TypeArguments="ui:UiElement" Name="CurrentProduct" />
+                        <Variable x:TypeArguments="x:String" Name="CurrentProduct_Label" />
+                      </uix:NForEachUiElement.Variables>
+                      <uix:NForEachUiElement.VariablesMetadata>
+                        <scg:List x:TypeArguments="uuam:VariableMetadata" x:Key="Column0" Capacity="4">
+                          <uuam:VariableMetadata Name="CurrentProduct" Type="ui:UiElement" />
+                          <uuam:VariableMetadata Name="CurrentProduct_Label" Type="x:String" />
+                        </scg:List>
+                      </uix:NForEachUiElement.VariablesMetadata>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NForEachUiElement>
+                    <uix:NForEachUiElement DisplayName="For Each UI Element 'Invoice download button'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentInvoice'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="514,1038" sap2010:WorkflowViewState.IdRef="NForEachUiElement_5" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                      <uix:NForEachUiElement.Body>
+                        <ActivityAction x:TypeArguments="x:Int32">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,739" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="InvoiceID" />
+                              <Variable x:TypeArguments="x:String" Name="InvoiceLocation" />
+                              <Variable x:TypeArguments="x:String" Name="InvoiceFileName" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGetText DisplayName="Get Text 'Download invoice'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" TextString="[InvoiceID]" Version="V5">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="emag.ro/history/shoppingdetails/437006667" CVScreenId="74128d73-2ada-4b15-a86e-03151c161aa4" ContentHash="R80Q2A7BFkiKftR4O9yVaw" DesignTimeRectangle="1246, -1321, 233, 32" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='*Factura*' parentid='emg-body-overlay' tag='A' class='full-white-button*' idx='{0}' /&gt;&quot;, InvoiceIndex)]" Guid="04fbe556-4ad7-40eb-8d01-c5e0a4faa9fe" Reference="CcmIsI-4GUCBFFJdsVuOPQ/cgBrENzJyUaGUjTLG8pIdA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NGetText.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NGetText>
+                            <ui:Replace BuilderPattern="\/|\\|:|\*|\?|\&quot;" DisplayName="Replace Matching Patterns" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Replace_1" Input="[InvoiceID]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;\\\/|\\\\|:|\\*|\\?|\\\&quot;&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\/|\\|:|\*|\?|\&quot;" RegexOption="IgnoreCase, Compiled" Result="[InvoiceID]">
+                              <ui:Replace.Replacement>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ui:Replace.Replacement>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:Replace>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download invoice'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="emag.ro/history/shoppingdetails/437006667" CVScreenId="74128d73-2ada-4b15-a86e-03151c161aa4" ContentHash="R80Q2A7BFkiKftR4O9yVaw" DesignTimeRectangle="1246, -1321, 233, 32" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='*Factura*' parentid='emg-body-overlay' tag='A' class='full-white-button*' idx='{0}' /&gt;&quot;, InvoiceIndex)]" Guid="04fbe556-4ad7-40eb-8d01-c5e0a4faa9fe" Reference="CcmIsI-4GUCBFFJdsVuOPQ/cgBrENzJyUaGUjTLG8pIdA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <uix:NCheckState DisplayName="Check App State 'Download pop up'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Timeout="2" Version="V5">
+                              <uix:NCheckState.IfExists>
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,278" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download invoice'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="emag.ro/history/shoppingdetails/437006667" CVScreenId="74128d73-2ada-4b15-a86e-03151c161aa4" ContentHash="R80Q2A7BFkiKftR4O9yVaw" DesignTimeRectangle="1246, -1321, 233, 32" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='*Factura*' parentid='emg-body-overlay' tag='A' class='full-white-button*' idx='{0}' /&gt;&quot;, InvoiceIndex)]" Guid="04fbe556-4ad7-40eb-8d01-c5e0a4faa9fe" Reference="CcmIsI-4GUCBFFJdsVuOPQ/cgBrENzJyUaGUjTLG8pIdA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NClick.Target>
+                                    <uix:NClick.VerifyOptions>
+                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                        <uix:VerifyExecutionOptions.Retry>
+                                          <InArgument x:TypeArguments="x:Boolean" />
+                                        </uix:VerifyExecutionOptions.Retry>
+                                        <uix:VerifyExecutionOptions.Timeout>
+                                          <InArgument x:TypeArguments="x:Double" />
+                                        </uix:VerifyExecutionOptions.Timeout>
+                                      </uix:VerifyExecutionOptions>
+                                    </uix:NClick.VerifyOptions>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                </Sequence>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable BrowserURL="" CVScreenId="641e8fbe-133b-4a04-a852-83181100f908" ContentHash="e2_bIgCubkCdOhJAsbW_5g" CvElementArea="131, 290, 623, 24" CvType="InputBox" DesignTimeRectangle="136, 294, 599, 17" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="5772e2e4-3ab0-46e1-aa4c-92ae1cb055c5" InformativeScreenshot="57ba4923b88f28de65c94e49e420dcd5.png" IsResponsive="True" Reference="CcmIsI-4GUCBFFJdsVuOPQ/Z_A7LPm45EOCroIWm644Dg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="641e8fbe-133b-4a04-a852-83181100f908" CvTextArea="73, 296, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 291, 115, 23" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;ctrl name='Explorer Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Details Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='File name:' role='text' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='File name:' /&gt;" Guid="f7256dab-d558-4bc0-beed-235a9325572c" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NCheckState.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NCheckState>
+                            <Assign DisplayName="Assign &quot;Invoice location&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_15">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[InvoiceLocation]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["C:\Users\gcale\Documents\UiPath\EmagInvoices\"+OrderID + "_" +InvoiceID.Trim + ".pdf"]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <Assign DisplayName="Assign &quot;Invoice file name&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_16">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[InvoiceFileName]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[OrderID + "_" +InvoiceID.Trim +".pdf"]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Download location'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Text="[InvoiceLocation]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="" CVScreenId="641e8fbe-133b-4a04-a852-83181100f908" ContentHash="e2_bIgCubkCdOhJAsbW_5g" CvElementArea="131, 290, 623, 24" CvType="InputBox" DesignTimeRectangle="136, 294, 599, 17" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="5772e2e4-3ab0-46e1-aa4c-92ae1cb055c5" InformativeScreenshot="57ba4923b88f28de65c94e49e420dcd5.png" IsResponsive="True" Reference="CcmIsI-4GUCBFFJdsVuOPQ/Z_A7LPm45EOCroIWm644Dg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="641e8fbe-133b-4a04-a852-83181100f908" CvTextArea="73, 296, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 291, 115, 23" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;ctrl name='Explorer Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Details Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='File name:' role='text' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='File name:' /&gt;" Guid="f7256dab-d558-4bc0-beed-235a9325572c" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                              <uix:NTypeInto.VerifyOptions>
+                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                </uix:VerifyExecutionTypeIntoOptions>
+                              </uix:NTypeInto.VerifyOptions>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="" CVScreenId="27b360a0-e109-4f39-b7af-8eea27d4fcd2" ContentHash="l6KlkAee_UuRTPc8DXP_9A" CvElementArea="555, 429, 88, 26" CvTextArea="586, 435, 26, 12" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="555, 429, 88, 26" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" Guid="2b622309-d24a-47d2-a8fd-96669f1cc648" InformativeScreenshot="dc2b4b614c4e60fec93a9f4e3d6b1a46.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/7xhwp2ix9USO2WyAzgt27Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <uix:NCheckState DisplayName="Check App State 'Download pop up'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NCheckState_4" Mode="WaitDisappear" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                              <uix:NCheckState.IfExists>
+                                <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message &quot;Invoce saved&quot;" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Invoce saved&quot;]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:LogMessage>
+                                </Sequence>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message &quot;Failed to save invoice&quot;" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Error" Message="[&quot;Download pop ul is still visible&quot;]" />
+                                </Sequence>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable BrowserURL="" CVScreenId="641e8fbe-133b-4a04-a852-83181100f908" ContentHash="e2_bIgCubkCdOhJAsbW_5g" CvElementArea="131, 290, 623, 24" CvType="InputBox" DesignTimeRectangle="136, 294, 599, 17" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="5772e2e4-3ab0-46e1-aa4c-92ae1cb055c5" InformativeScreenshot="57ba4923b88f28de65c94e49e420dcd5.png" IsResponsive="True" Reference="CcmIsI-4GUCBFFJdsVuOPQ/Z_A7LPm45EOCroIWm644Dg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="641e8fbe-133b-4a04-a852-83181100f908" CvTextArea="73, 296, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 291, 115, 23" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;ctrl name='Explorer Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Details Pane' role='pane' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='File name:' role='text' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='File name:' /&gt;" Guid="f7256dab-d558-4bc0-beed-235a9325572c" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NCheckState.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NCheckState>
+                            <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="[InvoiceFileName]" DisplayName="Upload Storage File &quot;Invoice&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="UploadStorageFile_2" Path="[InvoiceFileName]" StorageBucketName="Invoices">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ucas:UploadStorageFile>
+                            <ui:DeleteFileX DisplayName="Delete File &quot;Invoice&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[InvoiceLocation]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:DeleteFileX>
+                            <Assign DisplayName="Assign &quot;Increment the invoice index&quot;" sap:VirtualizedContainerService.HintSize="416,50" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[InvoiceIndex]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[InvoiceIndex + 1]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NForEachUiElement.Body>
+                      <uix:NForEachUiElement.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.emag.ro/history/shoppingdetails/437006667" ContentHash="6h9XLXbor0CyGFX9kD9vFg" DesignTimeRectangle="605, -727, 955, 2726" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='account_holder' parentid='emg-body-overlay' tag='SPAN' /&gt;" Guid="c0a25220-dc71-4578-a670-9d0907a109fb" InformativeScreenshot="c03ff85752774aeca900bc4fe42bd6bf.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/I6W4hWs_B0-w8Y777dD1ow" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NForEachUiElement.Target>
+                      <uix:NForEachUiElement.Variables>
+                        <Variable x:TypeArguments="ui:UiElement" Name="CurrentInvoice" />
+                        <Variable x:TypeArguments="x:String" Name="CurrentInvoice_Label" />
+                      </uix:NForEachUiElement.Variables>
+                      <uix:NForEachUiElement.VariablesMetadata>
+                        <scg:List x:TypeArguments="uuam:VariableMetadata" x:Key="Column0" Capacity="4">
+                          <uuam:VariableMetadata Name="CurrentInvoice" Type="ui:UiElement" />
+                          <uuam:VariableMetadata Name="CurrentInvoice_Label" Type="x:String" />
+                        </scg:List>
+                      </uix:NForEachUiElement.VariablesMetadata>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NForEachUiElement>
+                    <uix:NNavigateBrowser DisplayName="Navigate Browser - Go Back to orders page" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NNavigateBrowser>
+                    <uix:NCheckState DisplayName="Check App State 'Order details'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Timeout="10" Version="V5">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message &quot;Back to the order page&quot;" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Back to the order page&quot;]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message &quot;Failed to navigate back&quot;" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;Failed to get to the order page&quot;]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping" CVScreenId="b22c7458-a198-41ef-8e10-87a12cf6d66f" ContentHash="YszhaliRUk2qgKi81AMw-A" DesignTimeRectangle="513, -110, 1186, 37" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='main-container' tag='DIV' class='order-list*' /&gt;&lt;webctrl parentid='main-container' tag='A' class='btn btn-link*' visibleinnertext='Vezi detalii comanda' idx='{0}' /&gt;&quot;, OrderIndex)]" Guid="5a474d90-1f6c-405f-853c-9b16635ef748" InformativeScreenshot="15fb0c7c207197a6f12eb95a20195271.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/eqMj01GIeEynkFMybH16tw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                    <Assign DisplayName="Assign 'Increment the order index'" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[OrderIndex]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[OrderIndex + 1]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <ui:LogMessage DisplayName="Log Message &quot;One order completed&quot;" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Completed order &quot; + OrderID]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:LogMessage>
+                    <uix:NGetText DisplayName="Get Text 'Previous page number'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="514,50" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" TextString="[PreviousPage]" Version="V5">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping/2" CVScreenId="917bf74a-f24d-4b30-9aeb-ab498a0f1be8" ContentHash="UHF4f6d6EkqDUxIS_Cc9GA" CvElementArea="1044, 390, 34, 34" CvType="Button" DesignTimeRectangle="1048, 392, 28, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DIV' class='placeholder pagination-container' /&gt;&lt;webctrl tag='LI' class='active' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='placeholder pagination-container' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl tag='LI' class='active' type='' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5dda1522-2862-4e90-86ef-4a80511b9d1c" ImageBase64="" InformativeScreenshot="8b05e1c82de6644181f50df1bacf6d5a.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/e3iArIuNDkiDVtbnVSnHJw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.emag.ro/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NForEachUiElement.Body>
+              <uix:NForEachUiElement.NextLink>
+                <uix:TargetAnchorable BrowserURL="emag.ro/history/shopping" CVScreenId="b1d0acf5-13ca-4e8c-89c5-b0659aaf2e38" CvElementArea="1190, 596, 140, 32" CvTextArea="1202, 605, 113, 15" CvTextArgument="Pagina urmatoare&gt;" CvType="Button" DesignTimeRectangle="1191, 597, 137, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Pagina urmatoare' parentid='main-container' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Pagina urmatoare' parentid='main-container' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Pagina urmatoare' /&gt;" Guid="f323f825-3582-4ac4-928e-0405c941ed0e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset X="0" Y="0" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NForEachUiElement.NextLink>
+              <uix:NForEachUiElement.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.emag.ro/history/shopping?status=all&amp;time=older" ContentHash="8JwyV8aZHE6LBnN2umDyHQ" DesignTimeRectangle="501, 287, 1210, 3857" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='history-shopping' parentid='main-container' tag='DIV' /&gt;" Guid="2e116810-1857-4a74-8d8b-cbd0b44a17c0" InformativeScreenshot="409f56b54d44f737671bd6d903861169.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/560mpunRsEeH8e8ok4b93A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NForEachUiElement.Target>
+              <uix:NForEachUiElement.Variables>
+                <Variable x:TypeArguments="s:Int32[]" Name="productName" />
+                <Variable x:TypeArguments="ui:UiElement" Name="CurrentOrder" />
+                <Variable x:TypeArguments="x:String" Name="CurrentOrder_Label" />
+              </uix:NForEachUiElement.Variables>
+              <uix:NForEachUiElement.VariablesMetadata>
+                <scg:List x:TypeArguments="uuam:VariableMetadata" x:Key="Column0" Capacity="4">
+                  <uuam:VariableMetadata Name="CurrentOrder" Type="ui:UiElement" />
+                  <uuam:VariableMetadata Name="CurrentOrder_Label" Type="x:String" />
+                </scg:List>
+              </uix:NForEachUiElement.VariablesMetadata>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NForEachUiElement>
+            <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" DataTable="[dt_Orders]" DisplayName="Sort Data Table &quot;Orders by the OrderID&quot;" sap:VirtualizedContainerService.HintSize="612,57" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Decending" OutputDataTable="[dt_Orders]" SortOrder="Descending">
+              <ui:SortDataTable.ColumnIndex>
+                <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+                  <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
+                </InArgument>
+              </ui:SortDataTable.ColumnIndex>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:SortDataTable>
+            <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[dt_Orders]" DisplayName="Write Range Workbook &quot;Write all the orders&quot;" sap:VirtualizedContainerService.HintSize="612,57" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="Orders.xlsx">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WriteRange>
+            <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="Orders.xlsx" DisplayName="Upload Storage File &quot;Orders sheet&quot;" sap:VirtualizedContainerService.HintSize="612,57" sap2010:WorkflowViewState.IdRef="UploadStorageFile_1" Path="Orders.xlsx" StorageBucketName="OrdersSheet">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ucas:UploadStorageFile>
+            <ui:DeleteFileX DisplayName="Delete File &quot;Orders&quot;" sap:VirtualizedContainerService.HintSize="612,106" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="Orders.xlsx">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:DeleteFileX>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1911, -9, 1938, 1038" BrowserType="Chrome" ContentHash="ce6cSPqTREao9W_KPwIjew" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJUSURBVDhPddNBSBRRGAdwy82VDkFR0CHqFMz3fdJbidwCcw/RQBFzGzvtLtbuIVsPbV7KhUq7BBErCWpBbGtUm152L+5uU+BIFycJGumiacHaoe1ZkSRW7otHboyjfvCO/x+8//teTY1jvlHD1jI1HirR0cQ0BvI2qm8t1GwT9ZdFCN7KQaR5GNrrnJn/w4nt5MQSZfJ9KJF/ZQYDwkZVWKgJE1tFAYKVLEQ/ZyDWNwTxfe7wHk7sMSe28oV8okR+sQEgshAVT6FDPITLxftwZX81vI0Tu82JVTgx4QAqNqpfJ1BbMLF1pegAUtApBpWr93qVbq8EVE6sLMMOYPk9HU9OoXp4AjXfGJ69WYDgohMYUBILd5XrpyQwVA3LUyaf+ERHRuaoeXv1iibqnjyEB5xAv5IQvcqNBxKYXQ80pacxELJRbbNQaxtHPZSHkAQqGQeQVLrfSeCnE1i9QsVdYrWDDMQcQM93CSxtALheQd8MWJLARzcwT03zMxh4bqNqWKgZJupGEYJGFqJGBmJGCjqNfiXxIqn05CTwxN3BPDW9nqPmg5N4pnYCNc846p5RCHtzENmVgZg3BZ31/UqiPrn6jKc5Mb6uA2oZm8KTYQu1Yya2nihA6FoWIrkRuNDgXEIJ1HFid9YvUovs4I+F2g8T9aXiv1UWz+Di6CO4tNeN7ObEUpzYbxewQYkdIg3xvgHo8riRHZxYR5l8don8vzYBljMQe5OGeGgQumrXAHIWCbaUqfFAifznZzCQslEdt1CbNFF/VYRgOgeRc8PQvuYn/gXGU8Tpc4IQzQAAAABJRU5ErkJggg==" InformativeScreenshot="641b9389b7865190e7c8b94e71a20987.jpg" Reference="CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw" Selector="&lt;html app='chrome.exe' title='eMAG.ro - *' /&gt;" Url="https://www.emag.ro/history/shopping" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

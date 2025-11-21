@@ -1,0 +1,16 @@
+﻿{
+  "Name": "eMag - Log in page",
+  "Type": "Screen",
+  "Id": "jpeLBqcOt0GD35S-3hLcgQ",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/jpeLBqcOt0GD35S-3hLcgQ",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/UzZ4fFL_WUupiWy-cD67jw",
+  "Created": "2025-10-27T05:31:15.0137857Z",
+  "Updated": "2025-10-27T05:32:03.8988294Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="R80Q2A7BFkiKftR4O9yVaw" Reference="CcmIsI-4GUCBFFJdsVuOPQ/cgBrENzJyUaGUjTLG8pIdA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="emag.ro/history/shoppingdetails/437006667" CVScreenId="74128d73-2ada-4b15-a86e-03151c161aa4" DesignTimeRectangle="1246, -1321, 233, 32" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='*Factura*' parentid='emg-body-overlay' tag='A' class='full-white-button*' idx='{0}' /&gt;&quot;, InvoiceIndex)]" Guid="04fbe556-4ad7-40eb-8d01-c5e0a4faa9fe" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+    <x:String x:Key="ActivityType">Click</x:String>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="1" Name="InvoiceIndex" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,18 @@
+﻿{
+  "Name": "Order URL",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "FMEr6_4bo0GMZ5XMqpu98g",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/FMEr6_4bo0GMZ5XMqpu98g",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-10-27T06:20:59.7395876Z",
+  "Updated": "2025-11-13T15:25:30.7808787Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

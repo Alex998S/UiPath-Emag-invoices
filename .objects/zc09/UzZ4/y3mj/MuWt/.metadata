@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Product price",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "MuWtfUmVRUqvKwMW9KJEMQ",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/MuWtfUmVRUqvKwMW9KJEMQ",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/y3mjs8sRm0yIcIvHlxr8qQ",
+  "Created": "2025-10-27T06:30:11.2191383Z",
+  "Updated": "2025-10-27T06:30:34.4038746Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

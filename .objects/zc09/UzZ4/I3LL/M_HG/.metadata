@@ -1,0 +1,16 @@
+﻿{
+  "Name": "All time option",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "M_HGU-c8d0qnsAqUBbQhLw",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/M_HGU-c8d0qnsAqUBbQhLw",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-08-06T04:36:33.1622216Z",
+  "Updated": "2025-08-06T04:36:55.0966309Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

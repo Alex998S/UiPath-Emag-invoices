@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Orders - for each",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "560mpunRsEeH8e8ok4b93A",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/560mpunRsEeH8e8ok4b93A",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-08-06T04:42:06.0092331Z",
+  "Updated": "2025-08-06T04:42:06.0092331Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

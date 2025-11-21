@@ -1,0 +1,14 @@
+﻿{
+  "Name": "eMAG.ro - orders",
+  "Type": "App",
+  "Id": "zc09Kizq502p88O3vz5dlA",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/zc09Kizq502p88O3vz5dlA",
+  "Created": "2025-08-04T13:25:59.3506483Z",
+  "Updated": "2025-08-06T04:52:50.6081827Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

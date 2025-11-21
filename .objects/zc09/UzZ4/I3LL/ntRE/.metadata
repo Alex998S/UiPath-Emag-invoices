@@ -1,0 +1,16 @@
+﻿{
+  "Name": "All orders option",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "ntREuI1MHUWgZWA4SeBzXw",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/ntREuI1MHUWgZWA4SeBzXw",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-08-06T04:35:08.266696Z",
+  "Updated": "2025-08-06T04:36:14.6522227Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

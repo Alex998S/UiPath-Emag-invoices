@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Product name",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "1yM1jrCj_UCdJIicQYFdPw",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/1yM1jrCj_UCdJIicQYFdPw",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/y3mjs8sRm0yIcIvHlxr8qQ",
+  "Created": "2025-08-06T04:47:08.7584646Z",
+  "Updated": "2025-08-06T04:47:08.7584646Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

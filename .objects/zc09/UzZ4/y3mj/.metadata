@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Product details page",
+  "Type": "Screen",
+  "Id": "y3mjs8sRm0yIcIvHlxr8qQ",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/y3mjs8sRm0yIcIvHlxr8qQ",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/UzZ4fFL_WUupiWy-cD67jw",
+  "Created": "2025-08-06T04:44:54.0149348Z",
+  "Updated": "2025-10-31T05:38:04.93095Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

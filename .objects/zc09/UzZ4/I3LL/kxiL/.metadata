@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Order date",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "kxiLQWugcUq22A6tFKTXbw",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/kxiLQWugcUq22A6tFKTXbw",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-10-28T05:20:00.2516719Z",
+  "Updated": "2025-10-28T05:24:54.2932424Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

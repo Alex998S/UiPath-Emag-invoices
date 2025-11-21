@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Current page number",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "e3iArIuNDkiDVtbnVSnHJw",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/e3iArIuNDkiDVtbnVSnHJw",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-11-13T15:12:12.7998028Z",
+  "Updated": "2025-11-13T15:12:32.3186872Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

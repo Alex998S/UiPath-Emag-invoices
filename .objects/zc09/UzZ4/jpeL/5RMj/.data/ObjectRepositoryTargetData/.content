@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ALdV6iHuW0ObXTi1oxPQNA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="auth.emag.ro/user/login" CVScreenId="43878ccc-4659-4b17-9609-a83429489b58" CvElementArea="793, 639, 350, 47" CvTextArea="936, 655, 64, 14" CvTextArgument="Continuă" CvType="Button" DesignTimeRectangle="795, 641, 346, 44" ElementType="Button" FullSelectorArgument="&lt;webctrl id='user_login_continue' tag='BUTTON' /&gt;" Guid="d3ac2598-7ffc-455d-81db-ad9a06d54b9b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Libertate în fiecare zi' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c4a3ab2d60545232ddd6809528c1d9b1.png" xmlns="">0kHkD95gpkU6zZnqcedbsrw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Order period",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "Qo3N1tJNv0KvbyWgZPHlpA",
+  "Reference": "CcmIsI-4GUCBFFJdsVuOPQ/Qo3N1tJNv0KvbyWgZPHlpA",
+  "ParentRef": "CcmIsI-4GUCBFFJdsVuOPQ/I3LL7z8RL0WCF5rhWBg_fw",
+  "Created": "2025-08-04T13:25:59.4954126Z",
+  "Updated": "2025-08-04T13:25:59.4954126Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

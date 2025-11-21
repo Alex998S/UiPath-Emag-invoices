@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VIlspCDwE0uhoDFcNcwBIw" Reference="CcmIsI-4GUCBFFJdsVuOPQ/t8haBnlkfkmmRlvMAoH3Jg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="emag.ro/history/shoppingdetails/431229116" CVScreenId="8d58561a-b6cc-46cd-8d0e-9ec58cb75c25" DesignTimeRectangle="1462, -1977, 36, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='product-quantity' parentid='emg-body-overlay' tag='SPAN' idx='{0}' /&gt;&quot;, ProductIndex)]" Guid="6edf6297-d898-46a7-8f6b-90ee7cb9d3c5" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="44a94765fdf5dfdb247523c6507d2a3e.png" xmlns="">0eeFC9KyN0kO_ye-5Ckvl9w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="1" Name="ProductIndex" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

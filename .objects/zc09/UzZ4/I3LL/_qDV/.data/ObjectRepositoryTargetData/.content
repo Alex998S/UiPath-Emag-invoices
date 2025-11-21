@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="WcufiRilWkyyxOT-MRlQIA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="emag.ro/history/shopping" CVScreenId="e0612203-1e5e-4443-93b9-25cbc91e2865" CvTextArea="519, 384, 26, 13" CvTextArgument="vezi" CvType="Text" DesignTimeRectangle="521, 381, 24, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' for='order-filters-showing' /&gt;" Guid="ef45df0d-906e-41a5-a506-ce58874bd855" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Căutarea nu se oprește niciodată' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d9ab544e3e20395892702c7046582060.png" xmlns="">0C1S0gPGf7UCUClTR5zCVBw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
