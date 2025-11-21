@@ -115,9 +115,16 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_invoices" sap:VirtualizedContainerService.HintSize="1281,4521" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_invoices" sap:VirtualizedContainerService.HintSize="1281,3444" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="1" Name="PreviousPage" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="ProductIndex" />
@@ -135,26 +142,26 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ucas:DownloadStorageFile Destination="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Download Storage File &quot;Orders&quot;" sap:VirtualizedContainerService.HintSize="680,167" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="Orders.xlsx" Result="[OrdersFile]" StorageBucketName="OrdersSheet">
+    <ucas:DownloadStorageFile Destination="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Download Storage File &quot;Orders&quot;" sap:VirtualizedContainerService.HintSize="680,57" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="Orders.xlsx" Result="[OrdersFile]" StorageBucketName="OrdersSheet">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ucas:DownloadStorageFile>
-    <ui:FileExistsX DisplayName="File Exists &quot;Check if orders file exists&quot;" Exists="[OrderExcelExists]" sap:VirtualizedContainerService.HintSize="680,167" sap2010:WorkflowViewState.IdRef="FileExistsX_2" Path="Orders.xlsx">
+    <ui:FileExistsX DisplayName="File Exists &quot;Check if orders file exists&quot;" Exists="[OrderExcelExists]" sap:VirtualizedContainerService.HintSize="680,57" sap2010:WorkflowViewState.IdRef="FileExistsX_2" Path="Orders.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FileExistsX>
-    <If Condition="[OrderExcelExists]" DisplayName="If &quot;A file with the orders already exists&quot;" sap:VirtualizedContainerService.HintSize="680,995" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[OrderExcelExists]" DisplayName="If &quot;A file with the orders already exists&quot;" sap:VirtualizedContainerService.HintSize="680,57" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -264,13 +271,13 @@
         </Sequence>
       </If.Else>
     </If>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="eMag - order first page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="680,3169" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="eMag - order first page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="680,3250" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646,2928" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646,3009" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -393,13 +400,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NForEachUiElement DisplayName="For Each UI Element 'Order'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='false' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentOrder'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="612,2304" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="Rows" MaximumResults="1000" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+            <uix:NForEachUiElement DisplayName="For Each UI Element 'Order'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='false' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentOrder'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="612,2441" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="Rows" MaximumResults="1000" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
               <uix:NForEachUiElement.Body>
                 <ActivityAction x:TypeArguments="x:Int32">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do 'Get product detail'" sap:VirtualizedContainerService.HintSize="548,2005" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Do 'Get product detail'" sap:VirtualizedContainerService.HintSize="548,2102" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="OrderDate" />
                       <Variable x:TypeArguments="x:String" Name="OrderURL" />
@@ -626,7 +633,7 @@
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,340" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="ProductName" />
                               <Variable x:TypeArguments="x:String" Name="ProductQuantity" />
@@ -634,7 +641,7 @@
                             </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -660,6 +667,20 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NGetText>
+                            <Assign DisplayName="Assign &quot;Extract only the digits for quantity&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_17">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[ProductQuantity]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(ProductQuantity,“\d+”).Value]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
                             <uix:NGetText DisplayName="Get Text 'Product price'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" TextString="[ProductPrice]" Version="V5">
                               <uix:NGetText.Target>
                                 <uix:TargetAnchorable BrowserURL="emag.ro/history/shoppingdetails/440982735" CVScreenId="d5c835cb-244c-4767-ab88-aea87da96392" ContentHash="FpWww_a4G0yn9AqaNHB55g" DesignTimeRectangle="1355, 504, 143, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='order-items-price' tag='P' idx='{0}' /&gt;&quot;, ProductIndex)]" Guid="b963b183-5b38-475f-b64c-8fa041858662" InformativeScreenshot="e651f45097485449be7fdef01169e85c.png" Reference="CcmIsI-4GUCBFFJdsVuOPQ/MuWtfUmVRUqvKwMW9KJEMQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Contul tau » Comenzile tale' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
@@ -719,13 +740,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NForEachUiElement>
-                    <uix:NForEachUiElement DisplayName="For Each UI Element 'Invoice download button'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentInvoice'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="514,1038" sap2010:WorkflowViewState.IdRef="NForEachUiElement_5" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
+                    <uix:NForEachUiElement DisplayName="For Each UI Element 'Invoice download button'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentInvoice'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="514,1135" sap2010:WorkflowViewState.IdRef="NForEachUiElement_5" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Version="V5">
                       <uix:NForEachUiElement.Body>
                         <ActivityAction x:TypeArguments="x:Int32">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,739" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,796" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="InvoiceID" />
                               <Variable x:TypeArguments="x:String" Name="InvoiceLocation" />
@@ -734,6 +755,7 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <uix:NGetText DisplayName="Get Text 'Download invoice'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" TextString="[InvoiceID]" Version="V5">
@@ -747,6 +769,20 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NGetText>
+                            <Assign DisplayName="Assign &quot;Remove .pdf from file name&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_18">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[InvoiceID]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[Split(InvoiceID, ".pdf")(0)]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
                             <ui:Replace BuilderPattern="\/|\\|:|\*|\?|\&quot;" DisplayName="Replace Matching Patterns" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Replace_1" Input="[InvoiceID]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;\\\/|\\\\|:|\\*|\\?|\\\&quot;&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\/|\\|:|\*|\?|\&quot;" RegexOption="IgnoreCase, Compiled" Result="[InvoiceID]">
                               <ui:Replace.Replacement>
                                 <InArgument x:TypeArguments="x:String">
@@ -842,7 +878,7 @@
                                 <OutArgument x:TypeArguments="x:String">[InvoiceLocation]</OutArgument>
                               </Assign.To>
                               <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">["C:\Users\gcale\Documents\UiPath\EmagInvoices\"+OrderID + "_" +InvoiceID.Trim + ".pdf"]</InArgument>
+                                <InArgument x:TypeArguments="x:String">[IO.Directory.GetCurrentDirectory]</InArgument>
                               </Assign.Value>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -856,7 +892,7 @@
                                 <OutArgument x:TypeArguments="x:String">[InvoiceFileName]</OutArgument>
                               </Assign.To>
                               <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">[OrderID + "_" +InvoiceID.Trim +".pdf"]</InArgument>
+                                <InArgument x:TypeArguments="x:String">[OrderID + "_" +InvoiceID.Trim]</InArgument>
                               </Assign.Value>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -865,7 +901,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Download location'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Text="[InvoiceLocation]" Version="V5">
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Download location'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="f3b78012-cba1-4a26-8fe1-467080de828c" Text="[InvoiceLocation + &quot;\&quot; + InvoiceFileName]" Version="V5">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="" CVScreenId="641e8fbe-133b-4a04-a852-83181100f908" ContentHash="e2_bIgCubkCdOhJAsbW_5g" CvElementArea="131, 290, 623, 24" CvType="InputBox" DesignTimeRectangle="136, 294, 599, 17" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="5772e2e4-3ab0-46e1-aa4c-92ae1cb055c5" InformativeScreenshot="57ba4923b88f28de65c94e49e420dcd5.png" IsResponsive="True" Reference="CcmIsI-4GUCBFFJdsVuOPQ/Z_A7LPm45EOCroIWm644Dg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                   <uix:TargetAnchorable.Anchors>
@@ -932,13 +968,20 @@
                                 </Sequence>
                               </uix:NCheckState.IfExists>
                               <uix:NCheckState.IfNotExists>
-                                <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message &quot;Failed to save invoice&quot;" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Error" Message="[&quot;Download pop ul is still visible&quot;]" />
+                                  <ui:LogMessage DisplayName="Log Message &quot;Failed to save invoice&quot;" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Error" Message="[&quot;Download pop ul is still visible&quot;]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:LogMessage>
                                 </Sequence>
                               </uix:NCheckState.IfNotExists>
                               <uix:NCheckState.Target>
@@ -957,7 +1000,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NCheckState>
-                            <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="[InvoiceFileName]" DisplayName="Upload Storage File &quot;Invoice&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="UploadStorageFile_2" Path="[InvoiceFileName]" StorageBucketName="Invoices">
+                            <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="[InvoiceFileName + &quot;.pdf&quot;]" DisplayName="Upload Storage File &quot;Invoice&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="UploadStorageFile_2" Path="[InvoiceFileName + &quot;.pdf&quot;]" StorageBucketName="Invoices">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -965,7 +1008,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ucas:UploadStorageFile>
-                            <ui:DeleteFileX DisplayName="Delete File &quot;Invoice&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[InvoiceLocation]">
+                            <ui:DeleteFileX DisplayName="Delete File &quot;Invoice&quot;" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[InvoiceLocation + &quot;\&quot; + InvoiceFileName + &quot;.pdf&quot;]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1156,10 +1199,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ucas:UploadStorageFile>
-            <ui:DeleteFileX DisplayName="Delete File &quot;Orders&quot;" sap:VirtualizedContainerService.HintSize="612,106" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="Orders.xlsx">
+            <ui:DeleteFileX DisplayName="Delete File &quot;Orders&quot;" sap:VirtualizedContainerService.HintSize="612,50" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="Orders.xlsx">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
